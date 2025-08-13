@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1755088257333,
+    "description" : "simple generateflowfile with update attribute",
+    "identifier" : "github-test",
+    "lastModifiedTimestamp" : 1755088257333,
+    "name" : "github-test",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
