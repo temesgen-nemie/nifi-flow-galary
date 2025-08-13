@@ -41,6 +41,36 @@
         "type" : "PROCESSOR"
       },
       "zIndex" : 1
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "419c140e-2e20-3cb4-b71a-419b6e701fc1",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "746d53fb-6795-32ca-a70e-803e3c3aad0f",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "7e92db91-807f-3f82-a7a6-4612cc664539",
+        "name" : "UpdateAttribute",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 2
     } ],
     "controllerServices" : [ ],
     "defaultBackPressureDataSizeThreshold" : "1 GB",
@@ -50,7 +80,15 @@
     "externalControllerServiceReferences" : { },
     "flowFileConcurrency" : "UNBOUNDED",
     "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
-    "funnels" : [ ],
+    "funnels" : [ {
+      "componentType" : "FUNNEL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "419c140e-2e20-3cb4-b71a-419b6e701fc1",
+      "position" : {
+        "x" : 642.1844203850615,
+        "y" : -112.5000033906274
+      }
+    } ],
     "identifier" : "flow-contents-group",
     "inputPorts" : [ ],
     "labels" : [ ],
@@ -152,7 +190,7 @@
       "type" : "org.apache.nifi.processors.standard.GenerateFlowFile",
       "yieldDuration" : "1 sec"
     }, {
-      "autoTerminatedRelationships" : [ "success" ],
+      "autoTerminatedRelationships" : [ ],
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
       "bundle" : {
@@ -228,6 +266,6 @@
   "snapshotMetadata" : {
     "author" : "c905e99a-bdbe-4a03-9ccd-baa1f8d2a844",
     "flowIdentifier" : "github-test",
-    "timestamp" : 1755088258594
+    "timestamp" : 1755089428499
   }
 }
